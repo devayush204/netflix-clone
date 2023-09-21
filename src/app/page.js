@@ -5,7 +5,7 @@ export default function Home() {
     <>
     <button>
       <a className='bg-pink-900 p-5' href="/login">
-        ayush
+        go to login page
       </a>
     </button>
     
