@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <img className="w-[600px] z-[2]" src={"/tv.png"} alt="" />
 
-          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted ></video>
+          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted autoPlay></video>
 
         </div>
       </section>
@@ -129,7 +129,8 @@ export default function Home() {
           </div>
           
             <img className="z-[2] " src={"/mac-section.png"} alt="" />
-            <video className="absolute w-[400px] bottom-[200px] right-[290px] z-[1]" src={"/mac-video.m4v"}></video>
+            <video className="absolute w-[400px] bottom-[200px] right-[290px] z-[1] loop muted autoPlay></video>
+" src={"/mac-video.m4v"}></video>
          
         </div>
       </section>
