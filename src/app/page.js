@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* enjoy on tv */}
-      <section className="bg-black w-full py-10">
+      <section className="bg-black w-full py-12">
         <div className="flex justify-center items-center gap-5 ">
           <div className="flex flex-col mt-10 gap-5 text-white">
             <p className="text-[50px] font-extrabold font-sans ">Enjoy on your TV</p>
