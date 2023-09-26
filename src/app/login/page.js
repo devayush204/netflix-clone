@@ -36,7 +36,7 @@ const Page = () => {
             </div>
 
             <div className=''>
-              <a className='w-full ' href="/">
+              <a className='w-full ' href="/watching">
                 <button className='w-full py-3 bg-red-600 rounded-md text-white  font-semibold text-[15px] font-sans tracking-wider'>
                   Sign In
                 </button>

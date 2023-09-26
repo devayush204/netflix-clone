@@ -89,9 +89,9 @@ export default function Home() {
             <p className="text-[50px] font-extrabold font-sans ">Enjoy on your TV</p>
             <p className="text-[23px]  ">Watch on smart TVs, PlayStation, Xbox, Chromecast,<br /> Apple TV, Blu-ray players and more.</p>
           </div>
-          <img className="w-[600px] z-[2]" src={"/tv.png"} alt="" />
+          <img className="w-[600px] z-[2]" src={"/tv.png"} draggable="false" alt="" />
 
-          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted ></video>
+          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted draggable="false" ></video>
 
         </div>
       </section>
