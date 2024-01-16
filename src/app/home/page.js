@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-// import thumbnail from '../../../public/landingpagebg.jpg';
+import thumbnail from '../../../public/landingpagebg.jpg';
 import { Info, Play, Volume2, VolumeX } from 'lucide-react';
 import Toprated from '../components/TopRated';
 import Popular from '../components/Popular';
@@ -16,10 +16,8 @@ const Home = () => {
       <div className='relative'>
         <Navbar />
         <div className='relative'>
-          <div className='h-[85vh] w-screen object-cover'>
-            {/* video come here */}
-          </div>
-          {/* <video
+
+          <video
             autoPlay
             muted
             playsInline
@@ -27,7 +25,7 @@ const Home = () => {
             className='h-[85vh] w-screen object-cover'
           >
             <source src='/header.mp4' type='video/mp4' />
-          </video> */}
+          </video>
           <div className='absolute top-[45%] px-8'>
             <h1 className='text-white uppercase font-semibold text-7xl tracking-widest'>Everest</h1>
           </div>
