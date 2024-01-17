@@ -5,6 +5,9 @@ import thumbnail from '../../../public/landingpagebg.jpg';
 import { Info, Play, Volume2, VolumeX } from 'lucide-react';
 import Toprated from '../components/TopRated';
 import Popular from '../components/Popular';
+import NowPlaying from '../components/NowPlaying';
+import UpComing from '../components/UpComing';
+import TrendingMovies from '../components/TrendingMovies';
 
 const Home = () => {
 
@@ -16,7 +19,6 @@ const Home = () => {
       <div className='relative'>
         <Navbar />
         <div className='relative'>
-
           <video
             autoPlay
             muted
@@ -42,7 +44,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='absolute bottom-[-130px] pl-8'>
+        <div className='absolute bottom-[-150px] pl-8'>
           <h1 className='text-3xl font-medium text-gray-300'>Top rated movies</h1>
           <div className='w-full'>
             <Toprated />
@@ -52,7 +54,15 @@ const Home = () => {
       <div className=''>
         <Popular />
       </div>
-
+      <div>
+        <NowPlaying />
+      </div>
+      <div>
+        <UpComing />
+      </div>
+      <div>
+        <TrendingMovies />
+      </div>
     </div>
   );
 };

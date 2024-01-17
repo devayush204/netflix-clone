@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.stroketext {
+  text-shadow: -6px -6px 0 #595959, 6px -6px 0 #595959, -6px 6px 0 #595959,
+    6px 6px 0 #595959, -6px -6px 0 #595959, 6px -6px 0 #595959,
+    -6px 6px 0 #595959, 6px 6px 0 #595959;
+  color: black;
+}
