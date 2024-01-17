@@ -10,18 +10,20 @@ export const GlobalContextProvider = ({ children }) => {
     const [TopRatedMovies, setTopRatedMovies] = useState([])
     const [Trending, setTrending] = useState([])
     const [Popular, setPopular] = useState([])
+    const [NowPlaying, setNowPlaying] = useState([])
+    const [upcoming, setupcoming] = useState([])
 
-    const apiKey = "1423fd97"
+
     const tmdbApi = "7b1639b361a6c27c3fb05b55cb8f3867"
     const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 
-    const omdbBaseUrl = 'http://www.omdbapi.com/';
     const [user, setuser] = useState(true)
 
     const fetchTrendingMovies = async () => {
         try {
             const response = await axios.get(`${tmdbBaseUrl}/trending/movie/week?api_key=${tmdbApi}`);
-            // console.log(response.data.results);
+            const top10 = response.data.results.splice(0, 10)
+            setTrending(top10)
 
         } catch (error) {
             console.error('Error fetching trending movies:', error);
@@ -31,7 +33,6 @@ export const GlobalContextProvider = ({ children }) => {
         try {
             const response = await axios.get(`${tmdbBaseUrl}/movie/top_rated?api_key=${tmdbApi}`);
             if (response.data.results) {
-                console.log(response.data.results, "top reateddd");
                 setTopRatedMovies(response.data.results)
             }
 
@@ -43,7 +44,6 @@ export const GlobalContextProvider = ({ children }) => {
         try {
             const response = await axios.get(`${tmdbBaseUrl}/movie/popular?api_key=${tmdbApi}`);
             if (response.data.results) {
-                console.log(response.data.results, "popular");
                 setPopular(response.data.results)
             }
 
@@ -52,16 +52,35 @@ export const GlobalContextProvider = ({ children }) => {
         }
     }
 
+    const fecthNowPlaying = async () => {
+        try {
+            const res = await axios.get(`${tmdbBaseUrl}/movie/now_playing?api_key=${tmdbApi}`)
+            setNowPlaying(res.data.results)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const fecthUpcoming = async () => {
+        try {
+            const res = await axios.get(`${tmdbBaseUrl}/movie/upcoming?api_key=${tmdbApi}`)
+            setupcoming(res.data.results)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(() => {
         fetchTrendingMovies()
         fetchTopRated()
         fetchPopularMovie()
+        fecthNowPlaying()
+        fecthUpcoming()
     }, [])
 
 
 
     return (
-        <GlobalContext.Provider value={{ user, TopRatedMovies, Popular }}>
+        <GlobalContext.Provider value={{ user, TopRatedMovies, Popular, Trending, NowPlaying, upcoming }}>
             {children}
         </GlobalContext.Provider>
     )
