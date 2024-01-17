@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <img className="w-[600px] z-[2]" src={"/tv.png"} draggable="false" alt="" />
 
-          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted draggable="false" ></video>
+          <video className="w-[450px] absolute left-[835px] z-[1]" src={"/tv-video.m4v"} loop muted autoPlay draggable="false"  ></video>
 
         </div>
       </section>

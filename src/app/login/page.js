@@ -25,12 +25,12 @@ const Page = () => {
 
             <div className='flex flex-col gap-4 mb-9'>
               <div className='relative flex text-zinc-400 w-full '>
-                <input className='w-full pt-6 pb-1 px-6 font-sm bg-[#333333] focus:outline-none rounded-lg' type="text" />
+                <input className='w-full pt-6 pb-1 px-6 font-sm bg-[#333333] focus:outline-none rounded-lg focus:text-white ' type="text" />
                 <label className='text-[10px]  top-2 absolute left-6 ' htmlFor="name">Email or phone number</label>
               </div>
 
               <div className='relative flex text-zinc-400 w-full '>
-                <input className='w-full pt-6 pb-1 px-6 font-sm bg-[#333333] focus:outline-none rounded-lg' type="password" />
+                <input className='w-full pt-6 pb-1 px-6 font-sm bg-[#333333] focus:text-white focus:outline-none rounded-lg' type="password" />
                 <label className='text-[10px]  top-2 absolute left-6 ' htmlFor="name">Enter your password</label>
               </div>
             </div>
