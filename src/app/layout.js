@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GlobalContextProvider>
         <body className={inter.className}>
-          <div className="">
+          <div>
             {children}
           </div>
         </body>
