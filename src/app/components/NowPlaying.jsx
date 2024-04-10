@@ -8,7 +8,7 @@ const NowPlaying = () => {
     return (
         <div className=' gap-4 overflow-x-auto mt-8 pl-8 flex flex-col '>
             <h1 className='text-3xl font-medium text-gray-300'>Continue watching</h1>
-            <div className='flex items-center gap-7 overflow-x-auto'>
+            <div className='flex items-center gap-8 overflow-x-auto'>
                 {
                     NowPlaying.map((item, index) => {
                         const randomnumber = Math.floor(Math.random() * 100)
