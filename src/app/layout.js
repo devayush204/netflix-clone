@@ -5,7 +5,7 @@ import { GlobalContextProvider } from './utils/Context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Netflix Clone',
+  title: 'Netflix Clone V2',
   description: 'created a netflix clone using movies Api',
 }
 
