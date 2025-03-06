@@ -5,9 +5,13 @@ import "./style.css"
 const Page = () => {
   // these are the language  dropdown 
   const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => {
+  const toggleDropdown = () => { 
     setIsOpen(!isOpen);
+    //console.log("dropdown is opened");
   };
+
+
+
 
   return (
     <>
